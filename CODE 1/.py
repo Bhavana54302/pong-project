@@ -20,13 +20,13 @@ left_paddle.penup()
 left_paddle.goto(-350, 0)
 
 # Paddle B
-paddle_b = turtle.Turtle()
-paddle_b.speed(0)
-paddle_b.shape("square")
-paddle_b.color("black")
-paddle_b.shapesize(stretch_wid=5, stretch_len=1)
-paddle_b.penup()
-paddle_b.goto(350, 0)
+right_paddle = turtle.Turtle()
+right_paddle.speed(0)
+right_paddle.shape("square")
+right_paddle.color("black")
+right_paddle.shapesize(stretch_wid=5, stretch_len=1)
+right_paddle.penup()
+right_paddle.goto(350, 0)
 
 # Ball
 ball = turtle.Turtle()
