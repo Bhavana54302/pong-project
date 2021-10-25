@@ -75,12 +75,12 @@ while True:
     ball.sety(ball.ycor() + ball.dy)
 
     # Border checking
-    if ball.ycor() > 290:
-        ball.sety(290)
+    if ball.ycor() > 250:
+        ball.sety(250)
         ball.dy *= -1
 
-    elif ball.ycor() < -290:
-        ball.sety(-290)
+    elif ball.ycor() < -250:
+        ball.sety(-250)
         ball.dy *= -1
 
     elif ball.xcor() > 390:
