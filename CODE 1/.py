@@ -45,7 +45,14 @@ ball.goto(0, 0)
 ball.dx = 0.1
 ball.dy = 0.1
 
-
+# pen
+pen = turtle.Turtle()
+pen.speed(0)
+pen.color("white")
+pen.penup()
+pen.hideturtle()
+pen.goto(0, 250)
+pen.write("Player A: 0  Player B: 0", align="center", font=("Courier", 20, "normal"))
 
 # function
 def left_paddle_up():
