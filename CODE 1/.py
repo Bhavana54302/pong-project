@@ -88,13 +88,13 @@ while True:
         ball.dx *= -1
         score_a += 1
         pen.clear()
-        pen.write("Player A: {}  Player B: {}".format(score_a, score_b), align="center", font=("Courier", 20, "normal"))
+        pen.write("Player A: {}  Player B: {}".format(score_a, score_b), align="center", font=("arial", 25, "normal"))
 
     elif ball.xcor() < -390:
         ball.goto(0, 0)
         ball.dx *= -1
         score_b += 1
         pen.clear()
-        pen.write("Player A: {}  Player B: {}".format(score_a, score_b), align="center", font=("Courier", 20, "normal"))
+        pen.write("Player A: {}  Player B: {}".format(score_a, score_b), align="center", font=("arial", 25, "normal"))
 
 
