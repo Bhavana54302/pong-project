@@ -42,9 +42,15 @@ def left_pad_up():
     y += 20
     left_pad.sety(y)
 
+def left_pad_down():
+    y = left_pad.ycor()
+    y -= 20
+    left_pad.sety(y)
+
 # keyboard binding
 wn.listen()
 wn.onkeypress(left_pad_up, "w")
+wn.onkeypress(right_pad_down, "s")
 
 # Main loop
 while True:
