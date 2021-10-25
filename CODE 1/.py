@@ -10,6 +10,12 @@ wn.bgcolor("light pink")
 wn.setup(width=800, height=600)
 wn.tracer(0)
 
+# score
+score_a = 0
+score_b = 0
+score_limit = 11
+
+
 # Paddle A
 left_paddle = turtle.Turtle()
 left_paddle.speed(0)
@@ -37,6 +43,8 @@ ball.penup()
 ball.goto(0, 0)
 ball.dx = 0.1
 ball.dy = 0.1
+
+
 
 # function
 def left_paddle_up():
