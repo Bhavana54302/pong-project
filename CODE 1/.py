@@ -11,13 +11,13 @@ wn.setup(width=800, height=600)
 wn.tracer(0)
 
 # Paddle A
-paddle_a = turtle.Turtle()
-paddle_a.speed(0)
-paddle_a.shape("square")
-paddle_a.color("black")
-paddle_a.shapesize(stretch_wid=6, stretch_len=1)
-paddle_a.penup()
-paddle_a.goto(-350, 0)
+left_paddle = turtle.Turtle()
+left_paddle.speed(0)
+left_paddle.shape("square")
+left_paddle.color("black")
+left_paddle.shapesize(stretch_wid=6, stretch_len=1)
+left_paddle.penup()
+left_paddle.goto(-350, 0)
 
 # Paddle B
 paddle_b = turtle.Turtle()
@@ -39,32 +39,32 @@ ball.dx = 0.1
 ball.dy = 0.1
 
 # function
-def left_pad_up():
-    y = left_pad.ycor()
+def left_paddle_up():
+    y = left_paddle.ycor()
     y += 20
-    left_pad.sety(y)
+    left_paddle.sety(y)
 
-def left_pad_down():
-    y = left_pad.ycor()
+def left_paddle_down():
+    y = left_paddle.ycor()
     y -= 20
-    left_pad.sety(y)
+    left_paddle.sety(y)
 
-def right_pad_up():
-    y = right_pad.ycor()
+def right_paddle_up():
+    y = right_paddle.ycor()
     y += 20
-    right_pad.sety(y)
+    right_paddle.sety(y)
 
-def right_pad_down():
-    y = right_pad.ycor()
+def right_paddle_down():
+    y = right_paddle.ycor()
     y -= 20
-    right_pad.sety(y)
+    right_paddle.sety(y)
 
 # keyboard binding
 wn.listen()
-wn.onkeypress(left_pad_up, "w")
-wn.onkeypress(right_pad_down, "s")
-wn.onkeypress(right_pad_up, "p")
-wn.onkeypress(right_pad_down, "l")
+wn.onkeypress(left_paddle_up, "w")
+wn.onkeypress(right_paddle_down, "s")
+wn.onkeypress(right_paddle_up, "p")
+wn.onkeypress(right_paddle_down, "l")
 
 # Main loop
 while True:
