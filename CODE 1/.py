@@ -35,6 +35,8 @@ ball.shape("circle")
 ball.color("black")
 ball.penup()
 ball.goto(0, 0)
+ball.dx = 0.1
+ball.dy = 0.1
 
 # function
 def left_pad_up():
