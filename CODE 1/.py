@@ -1,6 +1,7 @@
 # Team 94
 
 import turtle
+import winsound
 
 
 # set up screen
@@ -97,10 +98,12 @@ while True:
     if ball.ycor() > 290:
         ball.sety(290)
         ball.dy *= -1
+        winsound.PlaySound("borders.wav", winsound.SND_ASYNC)
 
     elif ball.ycor() < -290:
         ball.sety(-290)
         ball.dy *= -1
+        winsound.PlaySound("borders.wav", winsound.SND_ASYNC)
 
     elif ball.xcor() > 390:
         ball.goto(0, 0)
@@ -108,6 +111,7 @@ while True:
         score_a += 1
         pen.clear()
         pen.write("Player A: {}  Player B: {}".format(score_a, score_b), align="center", font=("arial", 25, "normal"))
+        winsound.PlaySound("borders.wav", winsound.SND_ASYNC)
 
     elif ball.xcor() < -390:
         ball.goto(0, 0)
