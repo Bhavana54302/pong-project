@@ -79,6 +79,11 @@ while True:
             ball.ycor() < rightpad_b.ycor()+40 and ball.ycor()>rightpad_b.ycor()-40):
         ball.setx(340)
         ball.dx *= -1
+        
+            if (ball.xcor() < -340 and ball.xcor() > -350) and (
+            ball.ycor() < leftpad_a.ycor()+40 and ball.ycor()>leftpad_a.ycor()-40):
+        ball.setx(-340)
+        ball.dx *= -1
 
     # Border checking
     if ball.ycor() > 290:
