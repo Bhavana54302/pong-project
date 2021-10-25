@@ -116,4 +116,27 @@ while True:
         pen.clear()
         pen.write("Player A: {}  Player B: {}".format(score_a, score_b), align="center", font=("arial", 25, "normal"))
 
+   if score_a == score_limit:
+        turtle.clearscreen()
+        a_wins = True
+        break
+
+    elif score_b == score_limit:
+        turtle.clearscreen()
+        b_wins = True
+        break
+
+while True:
+    if a_wins:
+        wn.bgcolor("black")
+        pen.goto(0,0)
+        pen.write("--GAME OVER--\nPlayer A wins", align="center", font=("Courier", 50, "normal"))
+
+    elif b_wins:
+        wn.bgcolor("black")
+        pen.goto(0,0)
+        pen.write("--GAME OVER--\nPlayer B wins", align="center", font=("Courier", 50, "normal"))
+
+
+
 
