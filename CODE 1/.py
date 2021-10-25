@@ -36,6 +36,16 @@ ball.color("black")
 ball.penup()
 ball.goto(0, 0)
 
+# function
+def left_pad_up():
+    y = left_pad.ycor()
+    y += 20
+    left_pad.sety(y)
+
+# keyboard binding
+wn.listen()
+wn.onkeypress(left_pad_up, "w")
+
 # Main loop
 while True:
     wn.update()
