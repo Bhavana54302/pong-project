@@ -6,7 +6,7 @@ import turtle
 # set up screen
 wn = turtle.Screen()
 wn.title("Pong by Team 94")
-wn.bgcolor("black")
+wn.bgcolor("light pink")
 wn.setup(width=800, height=600)
 wn.tracer(0)
 
