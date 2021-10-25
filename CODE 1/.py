@@ -123,11 +123,13 @@ while True:
    if score_a == score_limit:
         turtle.clearscreen()
         a_wins = True
+         winsound.PlaySound("bgsound2.wav", winsound.SND_ASYNC)
         break
 
     elif score_b == score_limit:
         turtle.clearscreen()
         b_wins = True
+         winsound.PlaySound("bgsound2.wav", winsound.SND_ASYNC)
         break
 
 while True:
