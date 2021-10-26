@@ -1,3 +1,4 @@
+
 # Team 94
 
 import turtle
@@ -9,7 +10,7 @@ b_wins = False
 # set up screen
 wn = turtle.Screen()
 wn.title("Pong by Team 94")
-wn.bgcolor("black")
+wn.bgpic("rrr6.gif")
 wn.setup(width=800, height=600)
 wn.tracer(0)
 
@@ -95,13 +96,12 @@ while True:
     if ball.ycor() > 290:
         ball.sety(290)
         ball.dy *= -1
-        winsound.PlaySound("borders.wav", winsound.SND_ASYNC)
+        
 
     elif ball.ycor() < -290:
         ball.sety(-290)
         ball.dy *= -1
-        winsound.PlaySound("borders.wav", winsound.SND_ASYNC)
-
+        
     elif ball.xcor() > 390:
         ball.goto(0, 0)
         ball.dx *= -1
@@ -121,23 +121,22 @@ while True:
     if (ball.xcor() > 340 and ball.xcor() < 350) and (ball.ycor() < paddle_b.ycor() + 40 and ball.ycor() > paddle_b.ycor() -40):
         ball.setx(340)
         ball.dx *= -1
-        winsound.PlaySound("ballsound3.wav", winsound.SND_ASYNC)
+       
 
     if (ball.xcor() < -340 and ball.xcor() > -350) and (ball.ycor() < paddle_a.ycor() + 40 and ball.ycor() > paddle_a.ycor() - 40):
         ball.setx(-340)
         ball.dx *= -1
-        winsound.PlaySound("ballsound3.wav", winsound.SND_ASYNC)
-
+       
     if score_a == score_limit:
         turtle.clearscreen()
         a_wins = True
-        winsound.PlaySound("bgsound2.wav", winsound.SND_ASYNC)
+       
         break
 
     elif score_b == score_limit:
         turtle.clearscreen()
         b_wins = True
-        winsound.PlaySound("bgsound2.wav", winsound.SND_ASYNC)
+
         break
 
 while True:
@@ -150,6 +149,4 @@ while True:
         wn.bgcolor("black")
         pen.goto(0, 0)
         pen.write("--GAME OVER--\nPlayer B wins", align="center", font=("Courier", 50, "normal"))
-
-
 
