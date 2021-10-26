@@ -1,4 +1,3 @@
-
 # Team 94
 
 import turtle
@@ -96,12 +95,13 @@ while True:
     if ball.ycor() > 290:
         ball.sety(290)
         ball.dy *= -1
-        
+        winsound.PlaySound("borders.wav", winsound.SND_ASYNC)
 
     elif ball.ycor() < -290:
         ball.sety(-290)
         ball.dy *= -1
-        
+        winsound.PlaySound("borders.wav", winsound.SND_ASYNC)
+
     elif ball.xcor() > 390:
         ball.goto(0, 0)
         ball.dx *= -1
@@ -121,22 +121,23 @@ while True:
     if (ball.xcor() > 340 and ball.xcor() < 350) and (ball.ycor() < paddle_b.ycor() + 40 and ball.ycor() > paddle_b.ycor() -40):
         ball.setx(340)
         ball.dx *= -1
-       
+        winsound.PlaySound("balls1.wav", winsound.SND_ASYNC)
 
     if (ball.xcor() < -340 and ball.xcor() > -350) and (ball.ycor() < paddle_a.ycor() + 40 and ball.ycor() > paddle_a.ycor() - 40):
         ball.setx(-340)
         ball.dx *= -1
-       
+        winsound.PlaySound("balls1.wav", winsound.SND_ASYNC)
+
     if score_a == score_limit:
         turtle.clearscreen()
         a_wins = True
-       
+        winsound.PlaySound("bgsound2.wav", winsound.SND_ASYNC)
         break
 
     elif score_b == score_limit:
         turtle.clearscreen()
         b_wins = True
-
+        winsound.PlaySound("bgsound2.wav", winsound.SND_ASYNC)
         break
 
 while True:
